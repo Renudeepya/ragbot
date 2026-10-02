@@ -1,0 +1,16 @@
+# Golden set for the grounded RAG chatbot.
+# expect_abstain marks out-of-corpus questions the bot must refuse to answer.
+{"id": "refund-window", "input": "How long do refunds take?", "tags": ["refunds", "grounded"], "metadata": {"contains": ["5 business days"]}}
+{"id": "refund-nonrefundable", "input": "Are gift cards refundable?", "tags": ["refunds", "grounded"], "metadata": {"contains": ["non-refundable"]}}
+{"id": "refund-trace", "input": "My refund has not arrived after two weeks, what do I do?", "tags": ["refunds", "grounded"], "metadata": {"contains": ["order id"]}}
+{"id": "ship-standard", "input": "How long does standard shipping take?", "tags": ["shipping", "grounded"], "metadata": {"contains": ["3 to 5 business days"]}}
+{"id": "ship-free-threshold", "input": "When is shipping free?", "tags": ["shipping", "grounded"], "metadata": {"contains": ["50 dollars"]}}
+{"id": "ship-international", "input": "How long does international delivery take?", "tags": ["shipping", "grounded"], "metadata": {"contains": ["7 to 14 business days"]}}
+{"id": "auth-reset", "input": "How do I reset my password?", "tags": ["accounts", "grounded"], "metadata": {"contains": ["Forgot password"]}}
+{"id": "auth-no-sms", "input": "Can I use SMS codes for two-factor authentication?", "tags": ["accounts", "grounded"], "metadata": {"contains": ["not supported"]}}
+{"id": "auth-lockout", "input": "How long is my account locked after failed sign-ins?", "tags": ["accounts", "grounded"], "metadata": {"contains": ["30 minutes"]}}
+{"id": "billing-cadence", "input": "How often are invoices issued?", "tags": ["billing", "grounded"], "metadata": {"contains": ["monthly"]}}
+{"id": "billing-dunning", "input": "What happens if my payment fails?", "tags": ["billing", "grounded"], "metadata": {"contains": ["three times"], "known_limitation": "requires synthesis across a chunk boundary; the extractive echo backend cannot do this. Passes with a real LLM backend."}}
+{"id": "oos-capital", "input": "What is the capital of France?", "tags": ["out-of-scope", "hallucination"], "metadata": {"expect_abstain": true, "expect_citation": false}}
+{"id": "oos-weather", "input": "What is the weather in Tokyo tomorrow?", "tags": ["out-of-scope", "hallucination"], "metadata": {"expect_abstain": true, "expect_citation": false}}
+{"id": "oos-competitor", "input": "What is your competitor's refund policy?", "tags": ["out-of-scope", "hallucination"], "metadata": {"expect_abstain": true, "expect_citation": false, "known_limitation": "'refund' and 'policy' are genuine corpus terms, so retrieval cannot reject this. Refusal must come from the generator reasoning about 'competitor'. The echo backend does not reason."}}

@@ -1,0 +1,775 @@
+{
+  "run_id": "e3078ae9ca34",
+  "agent": "ragbot:echo-context",
+  "created_at": "2026-09-28T22:43:42+00:00",
+  "pass_rate": 0.7142857142857143,
+  "mean_score": 0.9523809523809526,
+  "p95_latency_ms": 0.5446249997476116,
+  "by_tag": {
+    "refunds": 1.0,
+    "grounded": 0.9090909090909091,
+    "shipping": 1.0,
+    "accounts": 1.0,
+    "billing": 0.5,
+    "out-of-scope": 0.0,
+    "hallucination": 0.0
+  },
+  "cases": [
+    {
+      "case_id": "refund-window",
+      "tags": [
+        "refunds",
+        "grounded"
+      ],
+      "output": {
+        "text": "[1] Refunds are processed within 5 business days to the original payment method. Once processed, your bank may take an additional 2 to 3 business days to post the credit to your statement. Items must be returned unused and in original packaging to qualify for a full refund. Opened software licences and gift cards are non-refundable. Partial refunds are issued when an order is delivered incomplete. The refund covers the missing items plus a proportional share of the shipping cost. If a refund has not appeared after 10 business days, contact support with your order id and we will trace the trans",
+        "tool_calls": [],
+        "latency_ms": 0.643708001007326,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "abstains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "not an abstain case; skipped"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "case_id": "refund-nonrefundable",
+      "tags": [
+        "refunds",
+        "grounded"
+      ],
+      "output": {
+        "text": "[1] Refunds are processed within 5 business days to the original payment method. Once processed, your bank may take an additional 2 to 3 business days to post the credit to your statement. Items must be returned unused and in original packaging to qualify for a full refund. Opened software licences and gift cards are non-refundable. Partial refunds are issued when an order is delivered incomplete. The refund covers the missing items plus a proportional share of the shipping cost. If a refund has not appeared after 10 business days, contact support with your order id and we will trace the trans",
+        "tool_calls": [],
+        "latency_ms": 0.5203750006330665,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "abstains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "not an abstain case; skipped"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "case_id": "refund-trace",
+      "tags": [
+        "refunds",
+        "grounded"
+      ],
+      "output": {
+        "text": "[1] Refunds are processed within 5 business days to the original payment method. Once processed, your bank may take an additional 2 to 3 business days to post the credit to your statement. Items must be returned unused and in original packaging to qualify for a full refund. Opened software licences and gift cards are non-refundable. Partial refunds are issued when an order is delivered incomplete. The refund covers the missing items plus a proportional share of the shipping cost. If a refund has not appeared after 10 business days, contact support with your order id and we will trace the trans",
+        "tool_calls": [],
+        "latency_ms": 0.5369999998947605,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "abstains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "not an abstain case; skipped"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "case_id": "ship-standard",
+      "tags": [
+        "shipping",
+        "grounded"
+      ],
+      "output": {
+        "text": "[1] Standard shipping takes 3 to 5 business days within the continental United States. Express shipping is delivered the next business day when the order is placed before 2pm local time. Orders ship from the warehouse nearest the delivery address. Tracking numbers are emailed as soon as the carrier scans the package. International delivery takes 7 to 14 business days and may be subject to customs duties, which are the responsibility of the recipient. Shipping is free on orders over 50 dollars. Below that threshold, standard shipping costs 5 dollars and express shipping costs 15 dollars.",
+        "tool_calls": [],
+        "latency_ms": 0.5107910001242999,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "abstains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "not an abstain case; skipped"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "case_id": "ship-free-threshold",
+      "tags": [
+        "shipping",
+        "grounded"
+      ],
+      "output": {
+        "text": "[1] Standard shipping takes 3 to 5 business days within the continental United States. Express shipping is delivered the next business day when the order is placed before 2pm local time. Orders ship from the warehouse nearest the delivery address. Tracking numbers are emailed as soon as the carrier scans the package. International delivery takes 7 to 14 business days and may be subject to customs duties, which are the responsibility of the recipient. Shipping is free on orders over 50 dollars. Below that threshold, standard shipping costs 5 dollars and express shipping costs 15 dollars.",
+        "tool_calls": [],
+        "latency_ms": 0.5035409994889051,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "abstains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "not an abstain case; skipped"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "case_id": "ship-international",
+      "tags": [
+        "shipping",
+        "grounded"
+      ],
+      "output": {
+        "text": "[1] Standard shipping takes 3 to 5 business days within the continental United States. Express shipping is delivered the next business day when the order is placed before 2pm local time. Orders ship from the warehouse nearest the delivery address. Tracking numbers are emailed as soon as the carrier scans the package. International delivery takes 7 to 14 business days and may be subject to customs duties, which are the responsibility of the recipient. Shipping is free on orders over 50 dollars. Below that threshold, standard shipping costs 5 dollars and express shipping costs 15 dollars.",
+        "tool_calls": [],
+        "latency_ms": 0.4946670014760457,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "abstains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "not an abstain case; skipped"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "case_id": "auth-reset",
+      "tags": [
+        "accounts",
+        "grounded"
+      ],
+      "output": {
+        "text": "[1] Reset your password from the sign-in page using the Forgot password link. The reset email arrives within a few minutes and the link expires after 60 minutes. Two-factor authentication can be enabled under Security settings. We support authenticator apps and hardware security keys. SMS codes are not supported because they are vulnerable to SIM-swap attacks. Accounts are locked after 10 consecutive failed sign-in attempts and unlock automatically after 30 minutes. To close your account, contact support. Account closure is permanent and your order history cannot be recovered afterwards.",
+        "tool_calls": [],
+        "latency_ms": 0.5058339993411209,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "abstains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "not an abstain case; skipped"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "case_id": "auth-no-sms",
+      "tags": [
+        "accounts",
+        "grounded"
+      ],
+      "output": {
+        "text": "[1] Reset your password from the sign-in page using the Forgot password link. The reset email arrives within a few minutes and the link expires after 60 minutes. Two-factor authentication can be enabled under Security settings. We support authenticator apps and hardware security keys. SMS codes are not supported because they are vulnerable to SIM-swap attacks. Accounts are locked after 10 consecutive failed sign-in attempts and unlock automatically after 30 minutes. To close your account, contact support. Account closure is permanent and your order history cannot be recovered afterwards.",
+        "tool_calls": [],
+        "latency_ms": 0.5055410001659766,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "abstains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "not an abstain case; skipped"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "case_id": "auth-lockout",
+      "tags": [
+        "accounts",
+        "grounded"
+      ],
+      "output": {
+        "text": "[1] Reset your password from the sign-in page using the Forgot password link. The reset email arrives within a few minutes and the link expires after 60 minutes. Two-factor authentication can be enabled under Security settings. We support authenticator apps and hardware security keys. SMS codes are not supported because they are vulnerable to SIM-swap attacks. Accounts are locked after 10 consecutive failed sign-in attempts and unlock automatically after 30 minutes. To close your account, contact support. Account closure is permanent and your order history cannot be recovered afterwards.",
+        "tool_calls": [],
+        "latency_ms": 0.5259169993223622,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "abstains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "not an abstain case; skipped"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "case_id": "billing-cadence",
+      "tags": [
+        "billing",
+        "grounded"
+      ],
+      "output": {
+        "text": "[1] Invoices are available under the Billing section of your account and are issued monthly on the first day of the month. We accept major credit cards and bank transfer for annual plans. Purchase orders are available for enterprise customers with an annual commitment. Plan changes take effect immediately. When upgrading mid-cycle you are charged a prorated amount for the remainder of the billing period. Failed payments are retried three times over 7 days before the account is suspended. Suspended accounts retain their data for 30 days.",
+        "tool_calls": [],
+        "latency_ms": 0.5007500003557652,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "abstains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "not an abstain case; skipped"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": true,
+      "score": 1.0
+    },
+    {
+      "case_id": "billing-dunning",
+      "tags": [
+        "billing",
+        "grounded"
+      ],
+      "output": {
+        "text": "[1] Refunds are processed within 5 business days to the original payment method. Once processed, your bank may take an additional 2 to 3 business days to post the credit to your statement. Items must be returned unused and in original packaging to qualify for a full refund. Opened software licences and gift cards are non-refundable. Partial refunds are issued when an order is delivered incomplete. The refund covers the missing items plus a proportional share of the shipping cost. If a refund has not appeared after 10 business days, contact support with your order id and we will trace the trans",
+        "tool_calls": [],
+        "latency_ms": 0.48883300041779876,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 0.0,
+          "passed": false,
+          "detail": "missing: ['three times']"
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "abstains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "not an abstain case; skipped"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": false,
+      "score": 0.8333333333333334
+    },
+    {
+      "case_id": "oos-capital",
+      "tags": [
+        "out-of-scope",
+        "hallucination"
+      ],
+      "output": {
+        "text": "[1] Invoices are available under the Billing section of your account and are issued monthly on the first day of the month. We accept major credit cards and bank transfer for annual plans. Purchase orders are available for enterprise customers with an annual commitment. Plan changes take effect immediately. When upgrading mid-cycle you are charged a prorated amount for the remainder of the billing period. Failed payments are retried three times over 7 days before the account is suspended. Suspended accounts retain their data for 30 days.",
+        "tool_calls": [],
+        "latency_ms": 0.5029169988119975,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "nothing to check; skipped"
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": "citation not required; skipped"
+        },
+        {
+          "grader": "abstains",
+          "score": 0.0,
+          "passed": false,
+          "detail": "expected an abstention, got: '[1] Invoices are available under the Billing section of your account and are iss'"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": false,
+      "score": 0.8333333333333334
+    },
+    {
+      "case_id": "oos-weather",
+      "tags": [
+        "out-of-scope",
+        "hallucination"
+      ],
+      "output": {
+        "text": "[1] Reset your password from the sign-in page using the Forgot password link. The reset email arrives within a few minutes and the link expires after 60 minutes. Two-factor authentication can be enabled under Security settings. We support authenticator apps and hardware security keys. SMS codes are not supported because they are vulnerable to SIM-swap attacks. Accounts are locked after 10 consecutive failed sign-in attempts and unlock automatically after 30 minutes. To close your account, contact support. Account closure is permanent and your order history cannot be recovered afterwards.",
+        "tool_calls": [],
+        "latency_ms": 0.5446249997476116,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "nothing to check; skipped"
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": "citation not required; skipped"
+        },
+        {
+          "grader": "abstains",
+          "score": 0.0,
+          "passed": false,
+          "detail": "expected an abstention, got: '[1] Reset your password from the sign-in page using the Forgot password link. Th'"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": false,
+      "score": 0.8333333333333334
+    },
+    {
+      "case_id": "oos-competitor",
+      "tags": [
+        "out-of-scope",
+        "hallucination"
+      ],
+      "output": {
+        "text": "[1] Refunds are processed within 5 business days to the original payment method. Once processed, your bank may take an additional 2 to 3 business days to post the credit to your statement. Items must be returned unused and in original packaging to qualify for a full refund. Opened software licences and gift cards are non-refundable. Partial refunds are issued when an order is delivered incomplete. The refund covers the missing items plus a proportional share of the shipping cost. If a refund has not appeared after 10 business days, contact support with your order id and we will trace the trans",
+        "tool_calls": [],
+        "latency_ms": 0.5104169977130368,
+        "tokens": 0,
+        "error": null
+      },
+      "grades": [
+        {
+          "grader": "no_error",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "grader": "contains",
+          "score": 1.0,
+          "passed": true,
+          "detail": "nothing to check; skipped"
+        },
+        {
+          "grader": "tool_trajectory",
+          "score": 1.0,
+          "passed": true,
+          "detail": "no expected tools; skipped"
+        },
+        {
+          "grader": "has_citation",
+          "score": 1.0,
+          "passed": true,
+          "detail": "citation not required; skipped"
+        },
+        {
+          "grader": "abstains",
+          "score": 0.0,
+          "passed": false,
+          "detail": "expected an abstention, got: '[1] Refunds are processed within 5 business days to the original payment method.'"
+        },
+        {
+          "grader": "no_tool_loop",
+          "score": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "passed": false,
+      "score": 0.8333333333333334
+    }
+  ]
+}
